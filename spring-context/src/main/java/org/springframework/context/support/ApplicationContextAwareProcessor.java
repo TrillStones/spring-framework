@@ -101,6 +101,7 @@ class ApplicationContextAwareProcessor implements BeanPostProcessor {
 
 	private void invokeAwareInterfaces(Object bean) {
 		if (bean instanceof Aware) {
+			/*--同样使用if...else...判断，并没有什么特别的地方--*/
 			if (bean instanceof EnvironmentAware) {
 				((EnvironmentAware) bean).setEnvironment(this.applicationContext.getEnvironment());
 			}
