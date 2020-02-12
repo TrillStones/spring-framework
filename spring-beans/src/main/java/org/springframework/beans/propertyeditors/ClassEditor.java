@@ -59,6 +59,7 @@ public class ClassEditor extends PropertyEditorSupport {
 	}
 
 
+	/**##将文本转换为Class对象##**/
 	@Override
 	public void setAsText(String text) throws IllegalArgumentException {
 		if (StringUtils.hasText(text)) {
@@ -69,6 +70,7 @@ public class ClassEditor extends PropertyEditorSupport {
 		}
 	}
 
+	/**##将Class对象转换为类的限定名##**/
 	@Override
 	public String getAsText() {
 		Class<?> clazz = (Class<?>) getValue();
